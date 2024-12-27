@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
+
+.container {
+    display: grid;
+    height: 90%;
+    gap: 25px;
+    padding: 60px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.header {
+  height: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+.box img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 20px;
+  font-size: 25px;
+}
+.box:hover {
+  outline: 2px solid green;
+}

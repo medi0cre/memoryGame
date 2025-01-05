@@ -7,7 +7,7 @@ function waitThreeSeconds(button1, button2) {
   setTimeout(() => {
     button1.style.opacity = "1";
     button2.style.opacity = "1";
-  }, 3000);
+  }, 1000);
 }
 
 function displayOnScreen(text) {
